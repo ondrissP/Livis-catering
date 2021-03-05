@@ -1,0 +1,356 @@
+@import "variables";
+@import "mediaQueries"
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  max-width: 1920px;
+  text-align: center;
+  font: {
+    family: $font-family;
+    weight: 400;
+  }
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  width: 280px;
+  display: inline-flex;
+}
+
+.container {
+  width: 1420px;
+  margin: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 400;
+}
+
+section {
+  height: 100%;
+}
+
+.btn {
+  padding: 15px 25px;
+  margin-right: 20px;
+  border-radius: 30px;
+}
+.btn-green {
+ 	 background-color: $color-secondary;
+ 	 color: $color-primary;
+}
+.btn-white {
+	background-color: $color-primary;
+	color: $color-secondary;
+}
+.btn-red {
+	background-color: $color-heading;
+	color: $color-primary;
+}
+
+/* HEADER
+===========================================================
+*/
+header {
+  background-image: linear-gradient(
+      rgba(249, 232, 235, 0.85),
+      rgba(249, 232, 235, 0.85)
+    ),
+    url(../pictures/gallery/galeria-4.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  height: 900px;
+  clip-path: circle(3630px at 50% -2750px);
+}
+
+.header-container {
+  width: 73.95833%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav {
+  height: 150px;
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  & ul li {
+    display: inline-flex;
+    margin-right: 20px;
+    margin-top: 67px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    & a {
+      color: $color-secondary;
+	  font-weight: bold;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        color: $color-heading;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+}
+
+.header-text-box {
+  margin-top: 350px;
+  margin-left: 100px;
+  width: 35%;
+  text-align: left;
+
+  & h1 {
+    color: $color-secondary;
+    font-size: $size-main-header;
+	font-weight: 400;
+    margin-bottom: 30px;
+  }
+  & p {
+    color: $color-heading;
+    line-height: 1.5em;
+    margin-bottom: 50px;
+  }
+}
+
+.header-img-box {
+  position: absolute;
+  display: inline-block;
+  max-width: 550px;
+  top: 330px;
+  right: 13.0208%;
+  img {
+    width: 270px;
+    height: auto;
+    &:nth-child(2) {
+      width: 230px;
+    }
+    &:last-child {
+      margin-top: -30px;
+    }
+  }
+}
+
+/* MAIN CONTENT
+===========================================================
+*/
+.category {
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+// About us==================
+
+.about-us {
+  & .container {
+	position: relative;
+    color: $color-secondary;
+    text-align: left;
+    margin-left: 36.458%;
+    width: 750px;
+  }
+  & h3 {
+    color: $color-heading;
+    margin-top: 150px;
+  }
+  & h2 {
+    color: $color-heading;
+    margin-bottom: 30px;
+  }
+  & p {
+    margin-bottom: 15px;
+    line-height: 24px;
+  }
+  & ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 0;
+    color: $color-heading;
+    & li {
+      max-width: 80px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  & img {
+	position: absolute;
+	left: 0;
+	top: 980px;
+    width: 300px;
+  }
+  & .pattern {
+    width: 180px;
+	margin-left: 220px;
+	margin-top: 260px;
+  }
+}
+
+// Gallery==============
+
+.gallery {
+  text-align: left;
+  margin-top: 200px;
+  position: relative;
+  & h2,
+  h3 {
+    color: $color-secondary;
+  }
+
+  & img {
+    margin-top: 40px;
+    margin-bottom: -60px;
+    display: inline-flex;
+    height: 230px;
+    width: auto;
+  }
+  & .arrow {
+    width: 100px;
+    position: absolute;
+    top: -85px;
+    right: 250px;
+  }
+}
+
+// References=============
+
+.reference {
+  background-color: $color-secondary;
+  text-align: left;
+  color: $color-primary;
+  height: 800px;
+  & .container {
+    display: grid;
+    grid-template-columns: auto repeat(3, auto);
+    grid-gap: 50px;
+  }
+  & .heading {
+    align-self: center;
+    margin-top: -70px;
+    & h2 {
+      margin-bottom: 50px;
+    }
+    & .btn {
+      margin-left: 100px;
+    }
+  }
+  & p {
+    align-self: center;
+  }
+  & span {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
+// Contact============
+
+.contact {
+  text-align: left;
+  background-color: $color-primary;
+  min-height: 800px;
+  position: relative;
+  & h3, h2 {
+    color: $color-heading;
+  }
+  & h3 {
+    padding-top: 150px;
+  }
+  & .container {
+    padding-left: 100px;
+  }
+  & .logo {
+	position: absolute;
+    top: 150px;
+    right: 250px;
+	width: 300px;
+  }
+  & .pattern {
+	position: absolute;
+    width: 230px;
+    top: 500px;
+	right: 150px;
+    filter: brightness(0%) invert(100%);
+  }
+}
+
+form {
+  margin-top: 75px;
+  color: $color-secondary;
+  width: 50%;
+  //display: grid;
+  //grid-template-columns: 50% 50%;
+  //grid-gap: 50px;
+}
+
+label {
+  display: block;
+}
+
+input,
+textarea {
+  width: 100%;
+  color: $color-heading;
+  background-color: $color-primary;
+  border: none;
+  border-bottom: $color-secondary solid 1px;
+  padding: 10px;
+  margin-bottom: 20px;
+  /*& .email,
+	& .message {
+		display: block;
+		width: 200%;
+	}*/
+}
+textarea {
+	margin-bottom: 40px;
+}
+/* FOOTER
+===========================================================
+*/
+
+footer {
+  height: 50px;
+  color: $color-secondary;
+  & p {
+    padding-top: 19px;
+    text-align: center;
+  }
+}
