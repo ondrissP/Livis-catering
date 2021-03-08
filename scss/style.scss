@@ -1,9 +1,10 @@
 @import "variables";
+@import "keyframes";
 @font-face {
-	font-family: 'DM_Sans';
-	src: url('../FONT/DM_Sans/DMSans-Regular.ttf');
-  }
-  
+  font-family: "DM_Sans";
+  src: url("../FONT/DM_Sans/DMSans-Regular.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +21,7 @@ body {
   max-width: 1920px;
   text-align: center;
   font: {
-    family: 'DM_Sans';
+    family: "DM_Sans";
     weight: 400;
   }
   overflow-x: hidden;
@@ -66,51 +67,51 @@ section {
   inline-size: fit-content;
 }
 .btn-green {
- 	 background-color: $color-secondary;
- 	 color: $color-primary;
+  background-color: $color-secondary;
+  color: $color-primary;
 }
 .btn-white {
-	background-color: $color-primary;
-	color: $color-secondary;
+  background-color: $color-primary;
+  color: $color-secondary;
 }
 .btn-red {
-	background-color: $color-heading;
-	color: $color-primary;
+  background-color: $color-heading;
+  color: $color-primary;
 }
 .back-to-top {
-	color: $color-heading;
-	position: fixed;
-	font-size: 60px;
-	bottom: 0.5%;
-	right: 5%;
-	z-index: 10;
-	opacity: 0.5;
-	transition: opacity 0.3s;
+  color: $color-heading;
+  position: fixed;
+  font-size: 60px;
+  bottom: 0.5%;
+  right: 5%;
+  z-index: 10;
+  opacity: 0.5;
+  transition: opacity 0.3s;
 
-	  &:hover,
-	  &:focus {
-		opacity: 1;
-		transition: opacity 0.3s;
-	  }
+  &:hover,
+  &:focus {
+    opacity: 1;
+    transition: opacity 0.3s;
   }
+}
 #overlay {
-	background: rgba(0, 0, 0, 0.7);
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 20;
-	text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  text-align: center;
 
-	  img {
-		margin-top: 5%;
-		border: 3px solid $color-secondary;
-		border-radius: 0.75%;
-		height: 80%;
-		width: auto;
-	  }
+  img {
+    margin: 5% auto;
+    border: 3px solid $color-secondary;
+    border-radius: 0.75%;
+    max-height: 75%;
+    width: auto;
   }
+}
 
 /* HEADER
 ===========================================================
@@ -155,14 +156,14 @@ nav {
 
     & a {
       color: $color-secondary;
-	  font-weight: bold;
+      font-weight: bold;
       transition: 0.2s ease-in-out;
       &:hover {
         color: $color-heading;
         transition: 0.2s ease-in-out;
       }
     }
-}
+  }
 }
 
 .header-text-box {
@@ -174,7 +175,7 @@ nav {
   & h1 {
     color: $color-secondary;
     font-size: $size-main-header;
-	font-weight: 400;
+    font-weight: 400;
     margin-bottom: 30px;
   }
   & p {
@@ -203,62 +204,62 @@ nav {
 }
 
 #nav-cover {
-	background: darken($color-primary, 20%);
-	background-size: cover;
-	opacity: .95;
-	font-size: 3em;
-	line-height: 1.1em;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	z-index: 20;
-	text-align: center;
+  background: darken($color-primary, 20%);
+  background-size: cover;
+  opacity: 0.95;
+  font-size: 3em;
+  line-height: 1.1em;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 20;
+  text-align: center;
 
-	li {
-		padding: .3em 0;
-		border-bottom: solid 2px $color-primary;
+  li {
+    padding: 0.3em 0;
+    border-bottom: solid 2px $color-primary;
 
-		&:last-child {
-			border-bottom: none;
-		}
-	}
-	a {
-		color: $color-secondary;
-		transition: .2s ease-in-out;
-	  }
-	  a:hover,
-	  a:focus {
-		color: $color-primary;
-		transition: .2s ease-in-out
-	  }
+    &:last-child {
+      border-bottom: none;
+    }
   }
-  .nav-icon {
-	position: absolute;
-	right: 15%;
-	top: 40px;
-	cursor: pointer;
-	color: $color-secondary;
-	display: none;
-	z-index: 100;
-
-	&:hover,
-	&focus {
-	  color: $color-heading;
-	}
-	& .fa-times {
-		position: fixed;
-		right: 15%;
-		top: 90px;
-	}
-
-	i {
-	  font-size: 2.5em;
-	  text-shadow: 1px 2px 1px $color-secondary;
-	}
+  a {
+    color: $color-secondary;
+    transition: 0.2s ease-in-out;
   }
+  a:hover,
+  a:focus {
+    color: $color-primary;
+    transition: 0.2s ease-in-out;
+  }
+}
+.nav-icon {
+  position: absolute;
+  right: 15%;
+  top: 40px;
+  cursor: pointer;
+  color: $color-secondary;
+  display: none;
+  z-index: 100;
+
+  &:hover,
+  &focus {
+    color: $color-heading;
+  }
+  & .fa-times {
+    position: fixed;
+    right: 15%;
+    top: 90px;
+  }
+
+  i {
+    font-size: 2.5em;
+    text-shadow: 1px 2px 1px $color-secondary;
+  }
+}
 
 /* MAIN CONTENT
 ===========================================================
@@ -274,7 +275,7 @@ nav {
 
 .about-us {
   & .container {
-	position: relative;
+    position: relative;
     color: $color-secondary;
     text-align: left;
     margin-left: 36.458%;
@@ -293,26 +294,26 @@ nav {
     line-height: 24px;
   }
   & ul {
-	  margin-top: 50px;
-	  color: $color-heading;
-	  & li {
-		  vertical-align: middle;
-		  display: inline-block;
-		  padding-left: 7%;
-		  padding-bottom: 20px;
-     	  max-width: 80px;
+    margin-top: 50px;
+    color: $color-heading;
+    & li {
+      vertical-align: middle;
+      display: inline-block;
+      padding-left: 7%;
+      padding-bottom: 20px;
+      max-width: 80px;
     }
   }
   & img {
-	position: absolute;
-	left: 0;
-	top: 980px;
+    position: absolute;
+    left: 0;
+    top: 980px;
     width: 300px;
   }
   & .pattern {
     width: 180px;
-	margin-left: 220px;
-	margin-top: 260px;
+    margin-left: 220px;
+    margin-top: 260px;
   }
 }
 
@@ -320,11 +321,12 @@ nav {
 
 .gallery {
   text-align: left;
-  margin-top: 200px;
+  margin: 200px 0;
   position: relative;
 
   & .container {
-	width: 73.95833%;
+    width: 73.95833%;
+    position: relative;
   }
 
   & h2,
@@ -332,24 +334,32 @@ nav {
     color: $color-secondary;
   }
 
-  & .arrow {
+  & .next {
     width: 100px;
     position: absolute;
-	top: 80px;
-    right: 13.0208%;
+    top: 80px;
+    right: 0;
+    cursor: pointer;
   }
 }
-.slider{
-	width: 73.95833%;
-	display: inline-flex;
-	//display: none;
+.slider {
+  width: 100%;
+  position: relative;
 
-	img {
-    margin-top: 40px;
-    margin-bottom: -60px;
+  .slider-img {
+    position: absolute;
+    left: 40%;
+    opacity: 0;
     height: 230px;
     width: auto;
+    cursor: pointer;
+    animation: moveToLeft 0.3s ease-in-out;
 
+    &.active {
+      opacity: 1;
+      margin: 0 auto;
+      animation: moveFromRight 0.3s ease-in-out;
+    }
   }
 }
 
@@ -363,16 +373,16 @@ nav {
   & .container {
     display: flex;
     flex-direction: row;
-	justify-content: space-between;
-	line-height: 130%;
-	width: 73.95833%;
+    justify-content: space-between;
+    line-height: 130%;
+    width: 73.95833%;
   }
   & .heading {
     margin-top: 290px;
-	padding-right: 10%;
+    padding-right: 10%;
     & h2 {
       margin-bottom: 50px;
-	  line-height: 80%;
+      line-height: 80%;
     }
     & .btn {
       margin-left: 25%;
@@ -380,10 +390,10 @@ nav {
   }
   & p {
     align-self: center;
-	margin-right: 3%;
-	&:last-child {
-		margin-right: 0;
-	}
+    margin-right: 3%;
+    &:last-child {
+      margin-right: 0;
+    }
   }
   & span {
     display: block;
@@ -398,38 +408,36 @@ nav {
   background-color: $color-primary;
   min-height: 800px;
   position: relative;
-  & h3, h2 {
+  & h3,
+  h2 {
     color: $color-heading;
   }
   & h3 {
-    padding-top: 150px;
+    padding-top: 130px;
   }
   & .container {
-	width: 73.95833%;
+    width: 73.95833%;
     padding-left: 100px;
   }
   & .logo {
-	position: absolute;
+    position: absolute;
     top: 150px;
     right: 9.8%;
-	width: 300px;
+    width: 300px;
   }
   & .pattern {
-	position: absolute;
+    position: absolute;
     width: 230px;
     top: 500px;
-	right: 5%;
+    right: 5%;
     filter: brightness(0%) invert(100%);
   }
 }
 
 form {
-  margin-top: 75px;
+  margin: 75px 0;
   color: $color-secondary;
   width: 50%;
-  //display: grid;
-  //grid-template-columns: 50% 50%;
-  //grid-gap: 50px;
 }
 
 label {
@@ -452,8 +460,8 @@ textarea {
 	}*/
 }
 textarea {
-	width: 100%;
-	margin-bottom: 40px;
+  width: 100%;
+  margin-bottom: 40px;
 }
 /* FOOTER
 ===========================================================
